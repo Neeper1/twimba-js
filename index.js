@@ -68,10 +68,11 @@ function handleDeleteBtnClick(tweetId) {
         return tweet.uuid === tweetId
     })[0]
     
-    let deleteIndex = tweetsData.indexOf[targetTweetObj]
-    tweetsData.splice(deleteIndex, 1)
-    localStorage.setItem('tweetsData', JSON.stringify(tweetsData))
-    
+    if(targetTweetObj.handle === `@Scrimba`) {
+        let deleteIndex = tweetsData.indexOf[targetTweetObj]
+        tweetsData.splice(deleteIndex, 1)
+        localStorage.setItem('tweetsData', JSON.stringify(tweetsData))
+    }
     render()
     
 }
